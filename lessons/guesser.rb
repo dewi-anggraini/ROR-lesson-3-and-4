@@ -34,12 +34,12 @@ max = 100
         puts "Play again? (y/n)"
         play_again = gets.chomp.downcase
         if play_again == "y" || play_again == "yes"
-            play_again = gets.chomp.downcase
             play_game()
         else
             puts "Thanks for playing! See ya"
         end
     end
+end
 
 
 

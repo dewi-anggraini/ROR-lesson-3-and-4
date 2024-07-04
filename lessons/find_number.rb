@@ -1,5 +1,5 @@
 # find secret number
-def secret_number = rand(1..100)
+secret_number = rand(1..100)
 
 loop do
     # generates a new random number
@@ -14,20 +14,20 @@ loop do
     end
 
     if number > secret_number
-            puts "Try smaller"
-        elsif number < secret_numberputs 
-            puts "Try bigger"
+        puts "Try smaller"
+    elsif number < secret_number 
+        puts "Try bigger"
+    else
+        puts "Your guess is correct"
+        puts "Do you want to play again? (y/n)"
+        play_again = gets.chomp.downcase
+        if play_again == "yes" || play_again == "y"
+            secret_number = rand(1..100)
         else
-            puts "Your guess is correct"
-            puts "Do you want to play again? (y/n)"
-            play_again = gets.chomp.downcase
-            if play_again == "yes" || play_again == "y"
-                secret_number = rand(1..100)
-            else
-                break
-            end
+            break
         end
     end
+end
 
     puts "Game over, Thanks for playing!"
 
